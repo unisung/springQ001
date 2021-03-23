@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <!--  constructor injection -->
+<!--   <bean id="tv" class="polymorphism9.SamsungTV" 
+            init-method="initMethod" 
+            destroy-method="destroyMethod"
+            scope="prototype">
+        <constructor-arg ref="sony"></constructor-arg>    
+  </bean> -->
+  
+  <bean id="tv" class="polymorphism9.SamsungTV" >
+        <property name="speaker" ref="sony"></property>
+  </bean>
+  
+  <bean id="sony" class="polymorphism9.SonySpeaker"/>          
+  <!--  scope를 protoype으로 지정하면 singleton이 아닌 개별 객체로 생성됨, default는 싱글톤. -->          
+</beans>

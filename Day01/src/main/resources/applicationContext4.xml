@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <!--  id와 name으로 객체 빈 생성 
+          객체에 init-method으로 호출될 메소드와  destroy-method로 호출될 메소드 지정 -->
+  <bean id="tv" class="polymorphism7.SamsungTV" 
+            init-method="initMethod" 
+            destroy-method="destroyMethod"
+            scope="singleton"/>
+</beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <!--  constructor injection -->
+  <!--  생성자 매개변수의 순서는 index로 지정, index는 0부터 시작 -->
+  <bean id="tv" class="polymorphism12_setterInjection.SamsungTV" >
+            <property name="speaker" ref="apple"></property>
+            <property name="price" value="270000"></property>
+  </bean>
+  
+  <bean id="sony" class="polymorphism12_setterInjection.SonySpeaker"/>          
+  <bean id="apple" class="polymorphism12_setterInjection.AppleSpeaker"/>        
+</beans>
